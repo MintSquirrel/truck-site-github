@@ -3,9 +3,7 @@ This is for Team 14's capstone project, an amazing truck website.
 
 Install node.js
 
-$ npm install express
-
-$ npm install -D nodemon
+$ npm install 
 
 
 To Run:
