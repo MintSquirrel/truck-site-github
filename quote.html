@@ -17,7 +17,7 @@
 			text-align:center;
 			padding: 14px 16px;
 			margin-bottom:100px;
-			font-size: 50px
+			font-size: 30px
 
 		}
 
@@ -29,17 +29,25 @@
 		.placeorder{
 			text-align: center;
 			font-size:50px;
-			padding-top:100px;
+			padding-top:50px;
 			padding-bottom:100px;
 
 		}
+		
+		.quoteinfo{
+			text-align: center;
+			font-size:40px;
+			padding-top:0px;
+			padding-right:200px;
+			padding-left:200px;
+		}
+
 
 
 		</style>
 	</head>
 
 	<body>
-		<div style="background-image: url('truckwithdirt.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
 		<body style="background-color: #d9e0e8">
 			
 
@@ -51,17 +59,27 @@
 				<a href="">About Us</a>
 				<a href="">Privacy Policy</a>
 				<a href="">Contact Us</a>
-				<a href="">Apply Now</a>
+				<a href="apply.html">Apply Now</a>
 				<a href="">Carriers</a>
 			</aside>
+			<div class="quoteinfo">
+				Roadstar trucking delivers a wide range of construction materials across the greater DFW area. Materials include but are not limited to: Steel, Brick, Stone, Masonry, Etc. If an uncommon material is needed, include a note when reqauesting a quote.
+				<center><img src="dirttruck.jpg" alt="dirttruck" style ="width:700px; height:500px; display:inline-block; text-align:center; padding-top:50px">
+			</div>
 			<div class ="placeorder">
 				<form action="/action_page.php">
+					<label for="contact name">Contact Name:</label>
+  					<input type="text" id="name" name="name"><br><br>
+  					<label for="email">Contact Email:</label>
+  					<input type="text" id="email" name="email"><br><br>
  					<label for="material">Requested Material:</label>
   					<input type="text" id="material" name="material"><br><br>
   					<label for="quantity">Quantity (LBs):</label>
   					<input type="text" id="quantity" name="quantity"><br><br>
   					<label for="date">Requested Date:</label>
   					<input type="text" id="date" name="date"><br><br>
+  					<label for="note">Additional Notes:</label>
+  					<input type="text" id="note" name="note"><br><br>
   					<input type="submit" value="Submit">
 				</form>
 				
