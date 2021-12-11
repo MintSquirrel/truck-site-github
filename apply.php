@@ -45,7 +45,7 @@
                 <div class="applynow">
                     Apply Now
                 </div>
-            
+
                 <div class="appinfo">
                     Roadstar Trucking has been serving the DFW area for 20 years. With unmatched customer service, we are dedicated to delivering high quality materials with excellent customer service on every single job.<br>
                     <center><img src="img/dallas.jpg" alt="dallas" style ="width:550px; height:500px; display:block; text-align:center; padding-top:25px">
@@ -68,7 +68,7 @@
                         <label for="miles">Miles:</label>
                         <input type="text" id="miles" name="miles"><br><br>
                         <input type="submit" value="Submit">
-                    </form>          
+                    </form>
                 </div>
 		    </body>
     </body>

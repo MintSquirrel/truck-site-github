@@ -41,9 +41,9 @@
         <div class="login-form">
                 <h1>Login Form</h1>
                 <form action="auth" method="POST">
-                    <input type="text" name="username" placeholder="Username" required>
-                    <input type="password" name="password" placeholder="Password" required>
-                    <input type="submit">
+                    <input type="text" name="username" placeholder="Username" required value="<?php echo htmlspecialchars($username) ?>">
+                    <input type="password" name="password" placeholder="Password" required value="<?php echo htmlspecialchars($password) >
+                    <input type="submit" value="Submit" >
                 </form>
             </div>
     </body>
