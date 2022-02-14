@@ -1,6 +1,3 @@
-<?php
-
-?>
 
 <!DOCTYPE html>
 <html>
@@ -19,6 +16,7 @@
                 padding: 20px 0 20px 0;
             }
             .register-form input[type="password"],
+            .register-form input[type="confirm password"],
             .register-form input[type="text"] {
                 width: 100%;
                 padding: 15px;
@@ -36,17 +34,39 @@
                 font-weight: bold;
                 color: #ffffff;
             }
+            .error {
+                color: red;
+            }
+            .success {
+                color: green;
+            }
             </style>
 
     <body>
         <div class="register-form">
 			<h1>Registration Form</h1>
-			<form action="auth" method="POST">
+			<form action="config/register-run.php" method="POST">
 				<input type="text" name="username" placeholder="Username" required>
 				<input type="password" name="password" placeholder="Password" required>
-				<input type="password" name="confirm password" placeholder="Confirm Password" required>
-				<input type="submit">
+				<input type="password" name="passwordconfirm" placeholder="Confirm Password" required>
+				<input type="submit" name="submit">
 			</form>
+            <?php
+                if(isset($_GET["error"])){
+                    if($_GET["error"] == "pwdMatch"){
+                        echo "<p class='error'>Passwords do not match<p>";
+                    }
+                    else if($_GET["error"] == "stmtFailed"){
+                        echo "<p class='error'>Something went wrong, try again<p>";
+                    }
+                    else if($_GET["error"] == "nameTaken"){
+                        echo "<p class='error'>Choose another username<p>";
+                    }
+                    else if($_GET["error"] == "none"){
+                        echo "<p class='success'>Account has be created!<p>";
+                    }
+                }
+            ?>
 		</div>
 	</body>
 
