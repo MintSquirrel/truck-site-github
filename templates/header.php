@@ -26,3 +26,10 @@
             </ul>
         </div>
     </nav>
+
+      <header id="main-header">
+          <div class="container">
+              <h1>Roadstar</h1>
+          </div>
+      </header>
+    </div>

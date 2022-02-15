@@ -1,5 +1,49 @@
 <?php
+include('config/db_connect_testing.php');
+$miles = $model = $year = '';
+$errors = array('miles' => '', 'year' => '', 'model' => '');
 
+if(isset($_POST['submit'])){
+
+  if(empty($_POST['miles'])){
+    $errors['miles'] = 'Miles is required.';
+  } else {
+    $miles = $_POST['miles'];
+    if(preg_match('/^[a-zA-Z\s]+$/', $miles)){
+      $errors['miles'] = 'Miles must be an integer.';
+    }
+  }
+
+  if(empty($_POST['year'])){
+    $errors['year'] = 'Year is required.';
+  } else {
+    $year = $_POST['year'];
+    if(preg_match('/^[a-zA-Z\s]+$/', $year)){
+      $errors['miles'] = 'Year must be an integer.';
+    }
+  }
+
+  if(array_filter($errors)){
+    //error!!!
+  } else{
+    $miles = mysqli_real_escape_string($conn, $_POST['miles'] );
+    $year = mysqli_real_escape_string($conn, $_POST['year'] );
+    $model = mysqli_real_escape_string($conn, $_POST['model'] );
+  }
+
+  //create sql to send to server
+  $sql = "INSERT INTO trucks(model,year,miles) VALUES('$model','$year','$miles')";
+
+  //send to db and then check it
+  if(mysqli_query($conn,$sql)){
+    //successful!
+    mysqli_close($conn);
+    header('Location: testing_page.php');
+  } else {
+    echo 'query error: ' . mysqli_error($conn);
+    mysqli_close($conn);
+  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -25,27 +69,31 @@
 
 		.apply{
 			text-align: center;
-			font-size:50px;
+			font-size:20px;
 			padding-top:100px;
 			padding-bottom:100px;
+      max-width:460px;
+      margin: 20px auto;
+      padding: 20px;
+      color: #808080;
 		}
 
 		.appinfo{
 			text-align: center;
-			font-size:40px;
+			font-size:20px;
 			padding-top:0px;
 			padding-bottom:15px;
 			padding-right:200px;
 			padding-left:200px;
 		}
 		</style>
-        
+
     <body>
         <body style="background-color: #d9e0e8">
                 <div class="applynow">
                     Apply Now
                 </div>
-            
+
                 <div class="appinfo">
                     Roadstar Trucking has been serving the DFW area for 20 years. With unmatched customer service, we are dedicated to delivering high quality materials with excellent customer service on every single job.<br>
                     <center><img src="img/dallas.jpg" alt="dallas" style ="width:550px; height:500px; display:block; text-align:center; padding-top:25px">
@@ -60,15 +108,20 @@
                     Fill out our application form with current contact information. An employee will review your application and contact you within 48 hours to update you on the status of your work application
                 </div>
                 <div class ="apply">
-                    <form action="auth" method="POST">
+                    <form class="white" action="apply.php" method="POST">
                         <label for="truck model">Truck Model:</label>
-                        <input type="text" id="model" name="model"><br><br>
+                        <input type="text" id="model" name="model" value="<?php echo htmlspecialchars($model) ?>"><br><br>
+                        <div class="red-text"><?php echo $errors['model']; ?></div>
                         <label for="year">Year:</label>
-                        <input type="text" id="year" name="year"><br><br>
+                        <input type="text" id="year" name="year" value="<?php echo htmlspecialchars($year) ?>"><br><br>
+                        <div class="red-text"><?php echo $errors['year']; ?></div>
                         <label for="miles">Miles:</label>
-                        <input type="text" id="miles" name="miles"><br><br>
-                        <input type="submit" value="Submit">
-                    </form>          
+                        <input type="text" id="miles" name="miles" value="<?php echo htmlspecialchars($miles) ?>"><br><br>
+                        <div class="red-text"><?php echo $errors['miles']; ?></div>
+                        <div class="center">
+                          <input type="submit" name="submit" class="btn brand z-depth-0" value="Submit">
+                      </div>
+                    </form>
                 </div>
 		    </body>
     </body>

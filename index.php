@@ -10,11 +10,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
     <body>
-    <header id="main-header">
-        <div class="container">
-            <h1>Road Runners</h1>
-        </div>
-    </header>
+
 
     <section id="showcase">
       <h1>Dallas Best Truck transportation company.</h1>
