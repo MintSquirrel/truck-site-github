@@ -1,4 +1,8 @@
 <?php
+
+    // Code inspired by Dani Krossings' php tutorial on php, databases, and starting a login system
+    // https://www.youtube.com/watch?v=gCo6JqGMi30&ab_channel=DaniKrossing
+
     function pwdMatch($pwd, $pwd_confirm){
         $result;
         if($pwd !== $pwd_confirm){
