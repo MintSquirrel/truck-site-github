@@ -1,6 +1,6 @@
 <?php
 // connect to database
-  include('config/db_connect_testing.php');
+  include('config/db_connect.php');
 
   //write query for all trucks
   $sql = 'SELECT * FROM trucks ORDER BY date_created';

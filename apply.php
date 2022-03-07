@@ -1,5 +1,5 @@
 <?php
-include('config/db_connect_testing.php');
+include('config/db_connect.php');
 $miles = $model = $year = '';
 $errors = array('miles' => '', 'year' => '', 'model' => '');
 

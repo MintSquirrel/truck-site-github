@@ -331,7 +331,7 @@
         to the additional terms, you must immediately cease using our Site and
         Service.
         </p>
-        
+
     </body>
 
     <?php include('templates/footer.php'); ?>

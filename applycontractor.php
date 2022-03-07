@@ -1,5 +1,36 @@
 <?php
 
+// Connection to database
+include('config/db_connect.php');
+
+// Setting up variables to send to SQL
+$fname = $lname = '';
+$errors = array('miles' => '', 'year' => '', 'model' => '');
+
+//No error checking yet
+// Some minor error checking (Unfinished)
+if(isset($_POST['submit'])){
+
+  if(empty($_POST['model'])){
+
+  } else {
+
+  }
+
+  if(empty($_POST['model'])){
+
+  } else {
+
+  }
+
+  if(empty($_POST['model'])){
+
+  } else {
+
+  }
+
+}
+
 ?>
 
 
@@ -32,7 +63,7 @@
             <input type="text"><br><br>
 
             <input type="submit" value="Submit">
-        </form> 
+        </form>
     </body>
 
     <?php include('templates/footer.php'); ?>
