@@ -15,7 +15,8 @@
         <div class="container">
             <ul id="nav-mobile" class="right hide-on-small-and-down">
                 <li><a href="index.php" class="btn brand z-depth-0">Home</a></li>
-                <li><a href="#" class="btn brand z-depth-0">Customers</a></li>
+                <li><a href="applycustomer.php" class="btn brand z-depth-0">Customers</a></li>
+                <li><a href="applycontractor.php" class="btn brand z-depth-0">Contractor</a></li>
                 <li><a href="aboutus.php" class="btn brand z-depth-0">About Us</a></li>
                 <li><a href="quote.php" class="btn brand z-depth-0">Quote</a></li>
                 <li><a href="contact.php" class="btn brand z-depth-0">Contact</a></li>
