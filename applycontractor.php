@@ -38,8 +38,22 @@ if(isset($_POST['submit'])){
 <html>
     <?php include('templates/header.php'); ?>
         <title></title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
+    <style>
+        .contractor{
+            color: #FFFFFF;
+            font-family: calibri;
+            border: 10px grey;
+            font-size: 75px;
+            text-align: center;
+            background: #7399D5;
+        }
+    </style>
     <body>
+        <div class="contractor">
+            Be our contractor
+        </div>
         <form action="">
             <label for="fname">First name:</label>
             <input type="text" id="fname" name="fname"><br><br>

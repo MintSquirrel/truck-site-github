@@ -9,8 +9,20 @@
         <title>Trucking Website</title>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
+    <style>
+        .welcome{
+          color: #FFFFFF;
+          font-family: calibri;
+          border: 10px grey;
+          font-size: 75px;
+          text-align: center;
+          background: #7399D5;
+        }
+    </style>
     <body>
-
+    <div class="welcome">
+      Welcome
+    </div>
 
     <section id="showcase">
       <h1>Dallas Best Truck transportation company.</h1>

@@ -6,6 +6,7 @@
 <html>
     <?php include('templates/header.php'); ?>
         <title>Registration Form</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
             <style>
             .register-form {
                 width: 300px;

@@ -12,10 +12,20 @@
         display: block;
         margin: auto;
       }
+      .contact{
+            color: #FFFFFF;
+            font-family: calibri;
+            border: 10px grey;
+            font-size: 75px;
+            text-align: center;
+            background: #7399D5;
+        }
     </style>
     <body>
+        <div class="contact">
+            Contact us
+        </div>
         <section>
-        <h1>Contact Us</h1>
         <img src="img/contactusimage.jpeg" alt="image with truck drivers" />
         </section>
         <div class="background">

@@ -7,8 +7,22 @@
 <html>
     <?php include('templates/header.php'); ?>
         <title></title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
+    <style>
+        .customer{
+  color: #FFFFFF;
+  font-family: calibri;
+  border: 10px grey;
+  font-size: 75px;
+  text-align: center;
+  background: #7399D5;
+}
+    </style>
     <body>
+    <div class="customer">
+      Be our customer
+    </div>
         <form action="">
             <label>Company Name:</label>
             <input type="text"><br><br>

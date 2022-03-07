@@ -6,6 +6,7 @@
 <html>
     <?php include('templates/header.php'); ?>
         <title>Login Form</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<style>
 		.login-form {
 			width: 300px;
