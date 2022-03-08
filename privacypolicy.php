@@ -8,9 +8,21 @@
         <title></title>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
+    <style>
+        .privacy{
+            color: #FFFFFF;
+            font-family: calibri;
+            border: 10px grey;
+            font-size: 75px;
+            text-align: center;
+            background: #7399D5;
+        }
+    </style>
     <body>
+        <div class="privacy">
+            Privacy Policies
+        </div>
         <section>
-        <h1>Privacy Policies</h1>
         </section>
         <h2>Introduction</h2>
 
