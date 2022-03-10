@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <head>
     <title>Roadrunners</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -22,8 +26,16 @@
                 <li><a href="contact.php" class="btn brand z-depth-0">Contact</a></li>
                 <li><a href="apply.php" class="btn brand z-depth-0">Apply</a></li>
                 <li><a href="privacypolicy.php" class="btn brand z-depth-0">Privacy Policy</a></li>
-                <li><a href="register.php" class="btn brand z-depth-0">Register</a></li>
-                <li><a href="login.php" class="btn brand z-depth-0">Login</a></li>
+                <?php
+                    if(isset($_SESSION["username"])){
+                        echo "<li><a href='profile.php' class='btn brand z-depth-0'>Profile</a></li>";
+                        echo "<li><a href='config/logout-run.php' class='btn brand z-depth-0'>Log out</a></li>";
+                    }
+                    else{
+                        echo "<li><a href='register.php' class='btn brand z-depth-0'>Register</a></li>";
+                        echo "<li><a href='login.php' class='btn brand z-depth-0'>Login</a></li>";
+                    }
+                ?>
             </ul>
         </div>
     </nav>

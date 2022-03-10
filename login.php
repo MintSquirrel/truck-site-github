@@ -1,5 +1,5 @@
 <?php
-
+	include_once 'config/db.php';
 ?>
 
 <!DOCTYPE html>
@@ -41,11 +41,21 @@
     <body>
         <div class="login-form">
                 <h1>Login Form</h1>
-                <form action="auth" method="POST">
+                <form action="config/login-run.php" method="POST">
                     <input type="text" name="username" placeholder="Username" required>
                     <input type="password" name="password" placeholder="Password" required>
-                    <input type="submit">
+                    <input type="submit" name="submit">
                 </form>
+				<?php
+                if(isset($_GET["error"])){
+                    if($_GET["error"] == "wronglogin"){
+                        echo "<p class='error'>Incorrect username or password<p>";
+                    }
+					else if($_GET["error"] == "didntwork"){
+                        echo "<p class='error'>hey this didn't work!<p>";
+                    }
+                }
+            ?>
             </div>
     </body>
 
