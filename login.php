@@ -36,6 +36,9 @@
 			font-weight: bold;
 			color: #ffffff;
 		}
+		.error {
+            color: red;
+		}
 		</style>
     <body>
         <div class="login-form">
@@ -43,6 +46,11 @@
                 <form action="config/login-run.php" method="POST">
                     <input type="text" name="username" placeholder="Username" required>
                     <input type="password" name="password" placeholder="Password" required>
+					<label>
+                    	<input type="hidden" name="account" value="customer" />
+                    	<input type="checkbox" name="account" value="employee" />
+                    	<span>Are you an employee?</span>
+                	</label>
                     <input type="submit" name="submit">
                 </form>
 				<?php

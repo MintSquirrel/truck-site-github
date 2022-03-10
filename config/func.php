@@ -15,8 +15,14 @@
         return $result;
     }
 
-    function checkName($conn, $name){
-        $sql = "SELECT * FROM users WHERE user_uid = ?;";
+    function checkName($conn, $name, $acc){
+        if($acc === "employee"){
+            $sql = "SELECT * FROM employees WHERE emp_uid = ?;";
+        }
+        else{
+            $sql = "SELECT * FROM users WHERE user_uid = ?;";
+        }
+
         $stmt = mysqli_stmt_init($conn);
 
         if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -39,8 +45,14 @@
         mysqli_stmt_close($stmt);
     }
 
-    function registerUser($conn, $name, $pwd){
-        $sql = "INSERT INTO users (user_uid, user_pwd) VALUES (?, ?)";
+    function registerUser($conn, $name, $pwd, $acc){
+        if($acc === "employee"){
+            $sql = "INSERT INTO employees (emp_uid, emp_pwd) VALUES (?, ?)";
+        }
+        else{
+            $sql = "INSERT INTO users (user_uid, user_pwd) VALUES (?, ?)";
+        }
+        
         $stmt = mysqli_stmt_init($conn);
 
         if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -58,27 +70,45 @@
         exit();
     }
 
-    function loginUser($conn, $name, $pwd){
-        $user = checkName($conn, $name);
+    function loginUser($conn, $name, $pwd, $acc){
+        $user = checkName($conn, $name, $acc);
 
         if($user === false){
             header("Location: ../login.php?error=wronglogin");
             exit();
         }
 
-        $pwdHash = $user["user_pwd"];
+        if($acc === "employee"){
+            $pwdHash = $user["emp_pwd"];
+        }
+        else{
+            $pwdHash = $user["user_pwd"];
+        }
+
         $passwordCheck = password_verify($pwd, $pwdHash);
 
         if($passwordCheck === false){
             header("Location: ../login.php?error=wronglogin");
         }
         else{
-            session_start();
-            $_SESSION["userid"] = $user["id"];
-            $_SESSION["username"] = $user["user_uid"];
+            if($acc === "employee"){
+                session_start();
+                $_SESSION["userid"] = $user["id"];
+                $_SESSION["username"] = $user["emp_uid"];
+                $_SESSION["account"] = $acc;
 
-            header("Location: ../index.php");
-            exit();
+                header("Location: ../index.php");
+                exit();
+            }
+            else{
+                session_start();
+                $_SESSION["userid"] = $user["id"];
+                $_SESSION["username"] = $user["user_uid"];
+                $_SESSION["account"] = $acc;
+
+                header("Location: ../index.php");
+                exit();
+            }
         }
     }
 ?>

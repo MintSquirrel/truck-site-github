@@ -24,6 +24,7 @@
                 margin-bottom: 15px;
                 box-sizing:border-box;
             }
+        
             .register-form input[type="submit"] {
                 width: 100%;
                 padding: 15px;
@@ -49,6 +50,11 @@
 				<input type="text" name="username" placeholder="Username" required>
 				<input type="password" name="password" placeholder="Password" required>
 				<input type="password" name="passwordconfirm" placeholder="Confirm Password" required>
+                <label>
+                    <input type="hidden" name="account" value="customer" />
+                    <input type="checkbox" name="account" value="employee" />
+                    <span>Are you an employee?</span>
+                </label>
 				<input type="submit" name="submit">
 			</form>
             <?php

@@ -3,6 +3,7 @@
         $name = $_POST['username'];
         $pwd = $_POST['password'];
         $pwd_confirm = $_POST['passwordconfirm'];
+        $acc = $_POST['account'];
 
         require_once 'db.php';
         require_once 'func.php';
@@ -31,12 +32,12 @@
             header("Location: ../register.php?error=noSpecChar");
             exit();
         }
-        if(checkName($conn, $name) !== false){
+        if(checkName($conn, $name, $acc) !== false){
             header("Location: ../register.php?error=nameTaken");
             exit();
         }
 
-        registerUser($conn, $name, $pwd);
+        registerUser($conn, $name, $pwd, $acc);
     }
     else{
         header("Location: ../register.php");
