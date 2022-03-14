@@ -1,4 +1,4 @@
-
+<!-- registration form-->
 <!DOCTYPE html>
 <html>
     <?php include('templates/header.php'); ?>
@@ -42,7 +42,7 @@
                 color: green;
             }
             </style>
-
+<!-- form entries-->	
     <body>
         <div class="register-form">
 			<h1>Registration Form</h1>
@@ -83,6 +83,7 @@
                     }
                 }
             ?>
+		<!-- password constraints-->
             <p>Password must contain:</p>
             <ol>
                 <li>At least 8 characters</li>
