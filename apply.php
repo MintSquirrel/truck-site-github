@@ -1,3 +1,5 @@
+<!--customer apply page -->
+
 <?php
 include('config/db_connect.php');
 $miles = $model = $year = '';
