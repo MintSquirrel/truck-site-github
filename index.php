@@ -1,7 +1,7 @@
 <?php
 
 ?>
-
+<!--home page of website -->
 <!DOCTYPE html>
 <html>
     <?php include('templates/header.php'); ?>
