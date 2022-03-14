@@ -1,7 +1,7 @@
 <?php
 
 ?>
-
+<!-- About us page-->
 <!DOCTYPE html>
 <html>
     <?php include('templates/header.php'); ?>
