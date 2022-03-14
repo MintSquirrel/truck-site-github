@@ -1,7 +1,7 @@
 <?php
 
 ?>
-
+<!--apply page for customers to rent a truck -->
 
 <!DOCTYPE html>
 <html>
@@ -23,6 +23,7 @@
     <div class="customer">
       Be our customer
     </div>
+        <!--form section for data entry -->
         <form action="">
             <label>Company Name:</label>
             <input type="text"><br><br>
