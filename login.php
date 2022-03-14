@@ -1,7 +1,7 @@
 <?php
 	include_once 'config/db.php';
 ?>
-
+<!-- login forms-->
 <!DOCTYPE html>
 <html>
     <?php include('templates/header.php'); ?>
@@ -38,6 +38,7 @@
 			color: #ffffff;
 		}
 		</style>
+	<!-- form entries-->
     <body>
         <div class="login-form">
                 <h1>Login Form</h1>
