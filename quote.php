@@ -1,7 +1,7 @@
 <?php
 
 ?>
-
+<!--For customers to get a Quote from the company -->
 <!DOCTYPE html>
 <html>
     <?php include('templates/header.php'); ?>
