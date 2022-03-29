@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 07, 2022 at 02:45 AM
+-- Generation Time: Mar 29, 2022 at 07:25 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -20,6 +20,62 @@ SET time_zone = "+00:00";
 --
 -- Database: `users_tc`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contractors`
+--
+
+CREATE TABLE `contractors` (
+  `id` int(11) NOT NULL,
+  `fname` tinytext NOT NULL,
+  `lname` tinytext NOT NULL,
+  `address` text NOT NULL,
+  `city` tinytext NOT NULL,
+  `state` tinytext NOT NULL,
+  `zip` tinytext NOT NULL,
+  `phone` tinytext NOT NULL,
+  `email` text NOT NULL,
+  `license` int(11) NOT NULL,
+  `social` text NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contractors`
+--
+
+INSERT INTO `contractors` (`id`, `fname`, `lname`, `address`, `city`, `state`, `zip`, `phone`, `email`, `license`, `social`, `date_created`) VALUES
+(1, 'a', 'v', 'rqrq', 'rqr', 'tx', '55353', '5', 'afdg@gmail.com', 41342, '141421', '2022-03-29 15:00:50');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customers`
+--
+
+CREATE TABLE `customers` (
+  `id` int(11) NOT NULL,
+  `cname` tinytext NOT NULL,
+  `address` mediumtext NOT NULL,
+  `city` tinytext NOT NULL,
+  `state` tinytext NOT NULL,
+  `zip` tinytext NOT NULL,
+  `phone` tinytext NOT NULL,
+  `email` tinytext NOT NULL,
+  `bill_info` mediumtext NOT NULL,
+  `credit` mediumtext NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `customers`
+--
+
+INSERT INTO `customers` (`id`, `cname`, `address`, `city`, `state`, `zip`, `phone`, `email`, `bill_info`, `credit`, `date_created`) VALUES
+(1, 'a', 'c', 'd', 'e', '5', '1', '352@gmail.com', '5', '1', '2022-03-29 17:18:52'),
+(2, 'benis', 'crqrq', 'd12', 'e12421', '55555555', '151-52151-525', 'aaaa@gmail.org', '55555', '1', '2022-03-29 17:20:02');
 
 -- --------------------------------------------------------
 
@@ -72,6 +128,18 @@ CREATE TABLE `users` (
 --
 
 --
+-- Indexes for table `contractors`
+--
+ALTER TABLE `contractors`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `customers`
+--
+ALTER TABLE `customers`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `trucks`
 --
 ALTER TABLE `trucks`
@@ -86,6 +154,18 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `contractors`
+--
+ALTER TABLE `contractors`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `customers`
+--
+ALTER TABLE `customers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `trucks`
