@@ -4,13 +4,13 @@
   include('config/db_connect.php');
 
   //write query for all trucks
-  $sql = 'SELECT * FROM contractors ORDER BY date_created';
+  $sql = 'SELECT * FROM customers ORDER BY date_created';
 
   // get results of query
   $result = mysqli_query($conn, $sql);
 
   //fetch rows (records) as array
-  $contractors = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  $customers = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_free_result($result);
   mysqli_close($conn);
 
@@ -30,13 +30,13 @@
     <div class="container">
       <div class="row">
 
-        <?php foreach($contractors as $contractor){ ?>
+        <?php foreach($customers as $customer){ ?>
 
           <div class="col s6 md3">
             <div class="card z-depth-9">
               <div class="card-content center">
                 🚚
-                <h6> <?php echo htmlspecialchars($contractor['fname']); ?> </h6>
+                <h6> <?php echo htmlspecialchars($customer['cname']); ?> </h6>
             </div>
             <div class="card-action center-align">
               <a class= "brand-text" href="#">Click here for more info (wip)</a>
