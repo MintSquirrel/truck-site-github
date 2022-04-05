@@ -27,7 +27,7 @@
             header("Location: ../register.php?error=noDigit");
             exit();
         }
-        if(!preg_match('/[!@#$%^&*_~?-+=<>]/', $pwd)){
+        if(!preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $pwd)){
             header("Location: ../register.php?error=noSpecChar");
             exit();
         }
