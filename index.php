@@ -1,7 +1,7 @@
 <?php
 
 ?>
-
+<!--home page of website -->
 <!DOCTYPE html>
 <html>
     <?php include('templates/header.php'); ?>
@@ -9,12 +9,20 @@
         <title>Trucking Website</title>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
+    <style>
+        .welcome{
+          color: #FFFFFF;
+          font-family: calibri;
+          border: 10px grey;
+          font-size: 75px;
+          text-align: center;
+          background: #7399D5;
+        }
+    </style>
     <body>
-    <header id="main-header">
-        <div class="container">
-            <h1>Road Runners</h1>
-        </div>
-    </header>
+    <div class="welcome">
+      Welcome
+    </div>
 
     <section id="showcase">
       <h1>Dallas Best Truck transportation company.</h1>

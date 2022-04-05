@@ -1,12 +1,13 @@
 <?php
 
 ?>
-
+<!--For customers to get a Quote from the company -->
 <!DOCTYPE html>
 <html>
     <?php include('templates/header.php'); ?>
 
     <title> Get A Quote </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 		<style>
 		.getquote{
 			color: #FFFFFF;

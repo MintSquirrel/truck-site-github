@@ -1,11 +1,12 @@
 <?php
 	include_once 'config/db_connect.php';
 ?>
-
+<!-- login forms-->
 <!DOCTYPE html>
 <html>
     <?php include('templates/header.php'); ?>
         <title>Login Form</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<style>
 		.login-form {
 			width: 300px;
@@ -40,6 +41,7 @@
             color: red;
 		}
 		</style>
+	<!-- form entries-->
     <body>
         <div class="login-form">
                 <h1>Login Form</h1>
