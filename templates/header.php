@@ -24,7 +24,6 @@
                 <li><a href="aboutus.php" class="btn brand z-depth-0">About Us</a></li>
                 <li><a href="quote.php" class="btn brand z-depth-0">Quote</a></li>
                 <li><a href="contact.php" class="btn brand z-depth-0">Contact</a></li>
-                <li><a href="apply.php" class="btn brand z-depth-0">Apply</a></li>
                 <li><a href="privacypolicy.php" class="btn brand z-depth-0">Privacy Policy</a></li>
                 <?php
                     if(isset($_SESSION["username"])){
