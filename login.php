@@ -1,5 +1,5 @@
 <?php
-	include_once 'config/db.php';
+	include_once 'config/db_connect.php';
 ?>
 <!-- login forms-->
 <!DOCTYPE html>
