@@ -2,6 +2,18 @@
 <!DOCTYPE html>
 <html>
     <?php include('templates/header.php'); ?>
+    <?php
+        if(!isset($_SESSION["username"])){
+            if(isset($_SERVER['HTTP_REFERER'])){
+                header('Location: ' . $_SERVER['HTTP_REFERER']);
+                exit();
+            }
+            else{
+                header("Location: index.php");
+                exit();
+            }
+        }
+    ?>
         <title>Registration Form</title>
             <style>
             .register-form {
@@ -45,45 +57,49 @@
 
     <body>
         <div class="register-form">
-			<h1>Registration Form</h1>
-			<form action="config/register-run.php" method="POST">
-				<input type="text" name="username" placeholder="Username" required>
-				<input type="password" name="password" placeholder="Password" required>
-				<input type="password" name="passwordconfirm" placeholder="Confirm Password" required>
+			<h1>Change Password</h1>
+			<form action="config/change_pwd-run.php" method="POST">
+				<input type="password" name="oldpassword" placeholder="Old Password" required>
+				<input type="password" name="newpassword" placeholder="New Password" required>
+				<input type="password" name="newpasswordconfirm" placeholder="Confirm New Password" required>
+                <?php
+                    echo "<input type='hidden' name='username' value='{$_SESSION['username']}' >";
+                    echo "<input type='hidden' name='account' value='{$_SESSION['account']}' >";
+                ?>
 				<input type="submit" name="submit">
 			</form>
             <?php
                 if(isset($_GET["error"])){
+                    if($_GET["error"] == "wrongOldPwd"){
+                        echo "<p class='error'>Old password is incorrect<p>";
+                    }
                     if($_GET["error"] == "pwdMatch"){
-                        echo "<p class='error'>Passwords do not match<p>";
+                        echo "<p class='error'>New passwords do not match<p>";
                     }
                     else if($_GET["error"] == "stmtFailed"){
                         echo "<p class='error'>Something went wrong, try again<p>";
                     }
-                    else if($_GET["error"] == "nameTaken"){
-                        echo "<p class='error'>Choose another username<p>";
-                    }
                     else if($_GET["error"] == "shortPassword"){
-                        echo "<p class='error'>Password must be at least 8 characters<p>";
+                        echo "<p class='error'>New password must be at least 8 characters<p>";
                     }
                     else if($_GET["error"] == "noUpper"){
-                        echo "<p class='error'>Password must contain uppercase character<p>";
+                        echo "<p class='error'>New password must contain uppercase character<p>";
                     }
                     else if($_GET["error"] == "noLower"){
-                        echo "<p class='error'>Password must contain lowercase character<p>";
+                        echo "<p class='error'>New password must contain lowercase character<p>";
                     }
                     else if($_GET["error"] == "noDigit"){
-                        echo "<p class='error'>Password must contain a number<p>";
+                        echo "<p class='error'>New password must contain a number<p>";
                     }
                     else if($_GET["error"] == "noSpecChar"){
-                        echo "<p class='error'>Password must contain one special character<p>";
+                        echo "<p class='error'>New password must contain one special character<p>";
                     }
                     else if($_GET["error"] == "none"){
-                        echo "<p class='success'>Account has be created!<p>";
+                        echo "<p class='success'>Password has been changed!<p>";
                     }
                 }
             ?>
-            <p>Password must contain:</p>
+            <p>New password must contain:</p>
             <ol>
                 <li>At least 8 characters</li>
                 <li>At least one uppercase letter</li>

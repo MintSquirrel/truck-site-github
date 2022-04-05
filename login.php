@@ -1,5 +1,5 @@
 <?php
-	include_once 'config/db.php';
+	include_once 'config/db_connect.php';
 ?>
 
 <!DOCTYPE html>
@@ -46,11 +46,6 @@
                 <form action="config/login-run.php" method="POST">
                     <input type="text" name="username" placeholder="Username" required>
                     <input type="password" name="password" placeholder="Password" required>
-					<label>
-                    	<input type="hidden" name="account" value="customer" />
-                    	<input type="checkbox" name="account" value="employee" />
-                    	<span>Are you an employee?</span>
-                	</label>
                     <input type="submit" name="submit">
                 </form>
 				<?php
