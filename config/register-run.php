@@ -4,7 +4,7 @@
         $pwd = $_POST['password'];
         $pwd_confirm = $_POST['passwordconfirm'];
 
-        require_once 'db.php';
+        require_once 'db_connect.php';
         require_once 'func.php';
 
         if(pwdMatch($pwd, $pwd_confirm) !== false){
