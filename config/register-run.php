@@ -4,7 +4,7 @@
         $pwd = $_POST['password'];
         $pwd_confirm = $_POST['passwordconfirm'];
 
-        require_once 'db.php';
+        require_once 'db_connect.php';
         require_once 'func.php';
 
         if(pwdMatch($pwd, $pwd_confirm) !== false){
@@ -27,11 +27,19 @@
             header("Location: ../register.php?error=noDigit");
             exit();
         }
-        if(!preg_match('/[!@#$%^&*()_`~?]/', $pwd)){
+        if(!preg_match('/[!@#$%^&*_~?-+=<>]/', $pwd)){
             header("Location: ../register.php?error=noSpecChar");
             exit();
         }
         if(checkName($conn, $name) !== false){
+            header("Location: ../register.php?error=nameTaken");
+            exit();
+        }
+        if(checkNameEmp($conn, $name) !== false){
+            header("Location: ../register.php?error=nameTaken");
+            exit();
+        }
+        if(checkNameAdmin($conn, $name) !== false){
             header("Location: ../register.php?error=nameTaken");
             exit();
         }

@@ -1,9 +1,20 @@
-<!-- registration form-->
+
 <!DOCTYPE html>
 <html>
     <?php include('templates/header.php'); ?>
+    <?php
+        if($_SESSION["account"] !== "Admin"){
+            if(isset($_SERVER['HTTP_REFERER'])){
+                header('Location: ' . $_SERVER['HTTP_REFERER']);
+                exit();
+            }
+            else{
+                header("Location: index.php");
+                exit();
+            }
+        }
+    ?>
         <title>Registration Form</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
             <style>
             .register-form {
                 width: 300px;
@@ -43,11 +54,11 @@
                 color: green;
             }
             </style>
-<!-- form entries-->	
+
     <body>
         <div class="register-form">
-			<h1>Registration Form</h1>
-			<form action="config/register-run.php" method="POST">
+			<h1>Create a Subcontractor Account</h1>
+			<form action="config/admin_create-run.php" method="POST">
 				<input type="text" name="username" placeholder="Username" required>
 				<input type="password" name="password" placeholder="Password" required>
 				<input type="password" name="passwordconfirm" placeholder="Confirm Password" required>
@@ -64,35 +75,11 @@
                     else if($_GET["error"] == "nameTaken"){
                         echo "<p class='error'>Choose another username<p>";
                     }
-                    else if($_GET["error"] == "shortPassword"){
-                        echo "<p class='error'>Password must be at least 8 characters<p>";
-                    }
-                    else if($_GET["error"] == "noUpper"){
-                        echo "<p class='error'>Password must contain uppercase character<p>";
-                    }
-                    else if($_GET["error"] == "noLower"){
-                        echo "<p class='error'>Password must contain lowercase character<p>";
-                    }
-                    else if($_GET["error"] == "noDigit"){
-                        echo "<p class='error'>Password must contain a number<p>";
-                    }
-                    else if($_GET["error"] == "noSpecChar"){
-                        echo "<p class='error'>Password must contain one special character<p>";
-                    }
                     else if($_GET["error"] == "none"){
                         echo "<p class='success'>Account has be created!<p>";
                     }
                 }
             ?>
-		<!-- password constraints-->
-            <p>Password must contain:</p>
-            <ol>
-                <li>At least 8 characters</li>
-                <li>At least one uppercase letter</li>
-                <li>At least one lowercase letter</li>
-                <li>At least one number</li>
-                <li>At least one special character</li>
-            </ol>
 		</div>
 	</body>
 
