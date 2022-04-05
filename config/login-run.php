@@ -3,7 +3,7 @@
         $username = $_POST["username"];
         $pwd = $_POST["password"];
 
-        require_once 'db.php';
+        require_once 'db_connect.php';
         require_once 'func.php';
 
         loginUser($conn, $username, $pwd);

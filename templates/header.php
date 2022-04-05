@@ -28,6 +28,10 @@
                 <?php
                     if(isset($_SESSION["username"])){
                         echo "<li><a href='profile.php' class='btn brand z-depth-0'>Profile</a></li>";
+                        if($_SESSION["account"] === "Admin"){
+                            echo "<li><a href='admin_db.php' class='btn brand z-depth-0'>View Data</a></li>";
+                            echo "<li><a href='admin_create.php' class='btn brand z-depth-0'>Create Account</a></li>";
+                        }
                         echo "<li><a href='config/logout-run.php' class='btn brand z-depth-0'>Log out</a></li>";
                     }
                     else{

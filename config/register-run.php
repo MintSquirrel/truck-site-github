@@ -27,11 +27,19 @@
             header("Location: ../register.php?error=noDigit");
             exit();
         }
-        if(!preg_match('/[!@#$%^&*()_`~?]/', $pwd)){
+        if(!preg_match('/[!@#$%^&*_~?-+=<>]/', $pwd)){
             header("Location: ../register.php?error=noSpecChar");
             exit();
         }
         if(checkName($conn, $name) !== false){
+            header("Location: ../register.php?error=nameTaken");
+            exit();
+        }
+        if(checkNameEmp($conn, $name) !== false){
+            header("Location: ../register.php?error=nameTaken");
+            exit();
+        }
+        if(checkNameAdmin($conn, $name) !== false){
             header("Location: ../register.php?error=nameTaken");
             exit();
         }

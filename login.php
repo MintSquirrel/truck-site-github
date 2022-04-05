@@ -37,6 +37,9 @@
 			font-weight: bold;
 			color: #ffffff;
 		}
+		.error {
+            color: red;
+		}
 		</style>
 	<!-- form entries-->
     <body>
