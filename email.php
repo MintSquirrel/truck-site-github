@@ -3,7 +3,7 @@
    <head>
       <title>Sending HTML email using PHP</title>
    </head>
-
+// template for email
    <body>
 
       <?php
