@@ -1,7 +1,7 @@
 <?php
     session_start();
 ?>
-
+// title of the homepage
 <head>
     <title>Roadrunners</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
