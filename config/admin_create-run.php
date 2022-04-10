@@ -6,7 +6,7 @@
     
         require_once 'db_connect.php';
         require_once 'func.php';
-    
+    //checks for admin
         if(pwdMatch($pwd, $pwd_confirm) !== false){
             header("Location: ../admin_create.php?error=pwdMatch");
             exit();
