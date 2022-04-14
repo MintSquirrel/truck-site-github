@@ -12,8 +12,9 @@
 </head>
 <body class="grey lighten-4">
     <nav class="white z-depth-0">
-        <div class="container">
-            <ul id="nav-mobile" class="right hide-on-small-and-down">
+        <div class="nav-wrapper">
+          <a class="brand-text"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="index.php" class="btn brand z-depth-0">Home</a></li>
                 <li><a href="#" class="btn brand z-depth-0">Customers</a></li>
                 <li><a href="aboutus.php" class="btn brand z-depth-0">About Us</a></li>
@@ -29,7 +30,7 @@
 
       <header id="main-header">
           <div class="container">
-              <h1>Roadstar</h1>
+              <h1>★ Roadstar</h1>
           </div>
       </header>
     </div>
