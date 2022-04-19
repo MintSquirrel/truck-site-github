@@ -8,7 +8,6 @@
 
         <title></title>
     </head>
-    <body>
 
     <section>
         <h1>About Us</h1>
@@ -19,8 +18,6 @@
             lead times and optimize their inventory while reducing transportation costs. The reason for our continued growth and success is due <br>
             to making our customers satisfaction our number one goal at Road Star. </p>
     </section>
-    
-    </body>
 
     <?php include('templates/footer.php'); ?>
 </html>

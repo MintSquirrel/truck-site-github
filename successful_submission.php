@@ -3,8 +3,9 @@
     <?php include('templates/header.php'); ?>
 
         <title>Submission Successful</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
+
     </head>
+
     <body>
           <div class="col s6 md3">
             <div class="card z-depth-9">

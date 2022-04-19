@@ -9,24 +9,25 @@
             color: #cbb09c !important;
         }
     </style>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
+
+<!-- Body -->
 <body class="grey lighten-4">
-    <nav class="white z-depth-0">
-        <div class="nav-wrapper">
-          <a class="brand-text"></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="index.php" class="btn brand z-depth-0">Home</a></li>
-                <li><a href="#" class="btn brand z-depth-0">Customers</a></li>
-                <li><a href="aboutus.php" class="btn brand z-depth-0">About Us</a></li>
-                <li><a href="quote.php" class="btn brand z-depth-0">Quote</a></li>
-                <li><a href="contact.php" class="btn brand z-depth-0">Contact</a></li>
-                <li><a href="apply.php" class="btn brand z-depth-0">Apply</a></li>
-                <li><a href="privacypolicy.php" class="btn brand z-depth-0">Privacy Policy</a></li>
-                <li><a href="register.php" class="btn brand z-depth-0">Register</a></li>
-                <li><a href="login.php" class="btn brand z-depth-0">Login</a></li>
-            </ul>
-        </div>
-    </nav>
+
+  <nav>
+      <div class="nav-wrapper">
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.php">Home</a></li>
+          <li><a href="aboutus.php">About Us</a></li>
+          <li><a href="applycustomer.php">Customers</a></li>
+          <li><a href="applycontractor.php">Contractors</a></li>
+          <li><a href="contact.php">Contact</a></li>
+          <li><a href="register.php">Register</a></li>
+          <li><a href="login.php">Login</a></li>
+        </ul>
+      </div>
+  </nav>
 
       <header id="main-header">
           <div class="container">

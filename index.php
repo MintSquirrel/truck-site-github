@@ -7,11 +7,10 @@
     <?php include('templates/header.php'); ?>
 
         <title>Trucking Website</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
+
     </head>
+
     <body>
-
-
     <section id="showcase">
       <h1>Dallas Best Truck transportation company.</h1>
     </section>
