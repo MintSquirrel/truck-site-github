@@ -129,7 +129,6 @@ if(isset($_POST['submit'])){
             background: #7399D5;
         }
     </style>
-// contractors sign up page
 
     <body>
         <div class="contractor">
