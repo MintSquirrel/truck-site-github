@@ -9,6 +9,7 @@
         <title></title>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
+
     <style>
         .aboutus{
             color: #FFFFFF;
@@ -18,12 +19,13 @@
             text-align: center;
             background: #7399D5;
         }
-        
+
     </style>
     <body>
     <div class="aboutus">
         About Us
     </div>
+    
     <section>
         <h1>We are Roadstar Trucking Services, LLC.</h1>
         <h3>
@@ -43,8 +45,6 @@
             their inventory while reducing transportation costs. The reason for our continued growth and success is due to making<br>
             our customers satisfaction our number one goal at Road Star. </p>
     </section>
-    
-    </body>
 
     <?php include('templates/footer.php'); ?>
 </html>

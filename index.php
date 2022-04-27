@@ -7,8 +7,10 @@
     <?php include('templates/header.php'); ?>
 
         <title>Trucking Website</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
+
     </head>
+
+    <body>
     <style>
         .welcome{
           color: #FFFFFF;

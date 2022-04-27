@@ -7,8 +7,9 @@
     margin: 0;
     text-align: center;
   }
+
   #p { text-align: center }
-  
+
     .container {
     width: 80%;
     margin: auto;
@@ -36,7 +37,7 @@
     padding: 0 30px;
     box-sizing: border-box;
   }
-  
+
   #sidebar {
     float: right;
     width: 30%;
@@ -44,4 +45,8 @@
     color: #fff;
     padding: 10px;
     box-sizing: border-box;
+  }
+
+  #brand-logo {
+    color: coral;
   }
