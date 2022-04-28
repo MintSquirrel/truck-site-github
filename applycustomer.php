@@ -123,49 +123,58 @@ if(isset($_POST['submit'])){
   background: #7399D5;
 }
     </style>
+
+    <style>
+      .label{
+        font-size: 20px;
+        color: #000000;
+        text-align: left;
+        display: block;
+      }
+    </style>
     <body>
     <div class="customer">
       Customer Information Sheet
     </div>
         <form class="white" action="applycustomer.php" method="POST">
           <br>
-            <label for="cname">First name:</label>
+            <label for="cname" class="label">First name:</label>
             <input type="text" id="cname" name="cname"  value="<?php echo htmlspecialchars($cname) ?>" ><br><br>
             <div class="red-text"><?php echo $errors['cname']; ?></div>
 
-            <label for="address">Last name:</label>
+            <label for="address" class="label">Last name:</label>
             <input type="text" id="address" name="address" value="<?php echo htmlspecialchars($address) ?>" ><br><br>
             <div class="red-text"><?php echo $errors['address']; ?></div>
 
-            <label for="address">Address:</label>
+            <label for="address" class="label">Address:</label>
             <input type="text" id="address" name="address" value="<?php echo htmlspecialchars($address) ?>" ><br><br>
             <div class="red-text"><?php echo $errors['address']; ?></div>
 
-            <label for="city">City:</label>
+            <label for="city" class="label">City:</label>
             <input type="text" id="city" name="city" value="<?php echo htmlspecialchars($city) ?>" ><br><br>
             <div class="red-text"><?php echo $errors['city']; ?></div>
 
-            <label for="state">State:</label>
+            <label for="state" class="label">State:</label>
             <input type="text" id="state" name="state" value="<?php echo htmlspecialchars($state) ?>" ><br><br>
             <div class="red-text"><?php echo $errors['state']; ?></div>
 
-            <label for="address">Zip Code:</label>
+            <label for="address" class="label">Zip Code:</label>
             <input type="number" id="zip" name="zip" value="<?php echo htmlspecialchars($zip) ?>" ><br><br>
             <div class="red-text"><?php echo $errors['zip']; ?></div>
 
-            <label for="phone">Phone Number:</label>
+            <label for="phone" class="label">Phone Number:</label>
             <input type="tel" id="phone" name="phone" value="<?php echo htmlspecialchars($phone) ?>" ><br><br>
             <div class="red-text"><?php echo $errors['phone']; ?></div>
 
-            <label for="email">Email Address:</label>
+            <label for="email" class="label">Email Address:</label>
             <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($email) ?>" ><br><br>
             <div class="red-text"><?php echo $errors['email']; ?></div>
 
-            <label for="bill_info">Billing Info:</label>
+            <label for="bill_info" class="label">Billing Info:</label>
             <input type="number" id="bill_info" name="bill_info" value="<?php echo htmlspecialchars($bill_info) ?>" ><br><br>
             <div class="red-text"><?php echo $errors['bill_info']; ?></div>
 
-            <label for="credit">Credit Info:</label>
+            <label for="credit" class="label">Credit Info:</label>
             <input type="number" id="credit" name="credit" value="<?php echo htmlspecialchars($credit) ?>" ><br><br>
             <div class="red-text"><?php echo $errors['credit']; ?></div>
 
