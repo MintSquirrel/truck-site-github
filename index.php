@@ -28,6 +28,7 @@
           padding: 5px;
           image-rendering: auto;
           image-rendering: crisp-edges;
+          image-rendering: smooth;
         }
 
         .row::after {
