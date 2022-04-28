@@ -26,8 +26,9 @@
         About Us
     </div>
     
-    <section>
-        <h2>We are Roadstar Trucking Services, LLC.</h2>
+    <div class="row mt-3">
+        <div class="col-12  mt-3">
+        <h3>We are Roadstar Trucking Services, LLC.</h3>
         <h4>
             Location: 5326 W. Ledbetter Dr. Dallas, TX 75236<br>
             Office Number: 469-291-7755<br>
@@ -44,7 +45,9 @@
             need real-time information from their suppliers to their end-user, which helps them reduce lead times and optimize<br>
             their inventory while reducing transportation costs. The reason for our continued growth and success is due to making<br>
             our customers satisfaction our number one goal at Road Star. </p>
-    </section>
+        </div>
+    </div>
 
     <?php include('templates/footer.php'); ?>
+    <?php include('templates/scripts.php'); ?>
 </html>

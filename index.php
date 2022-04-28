@@ -12,23 +12,83 @@
 
     <body>
     <style>
+      .container{
+            color: #fff;
+            background-color: coral;
+            font-family: calibri;
+            text-align: center;
+            border: 10px grey;
+            font-size: 50px;
+            
+        }
         
+        .column {
+          float: left;
+          width: 33.33%;
+          padding: 5px;
+          image-rendering: auto;
+          image-rendering: crisp-edges;
+        }
+
+        .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+        .cont {
+          width: 80%;
+          margin: auto;
+          overflow: hidden;
+        }
+
+        .main {
+          background-color: #fff;
+          float: left;
+          width: 70%;
+          padding: 0 30px;
+          box-sizing: border-box;
+        }
+
+        .sidebar {
+          float: right;
+          width: 30%;
+          background: #333;
+          color: #fff;
+          padding: 10px;
+          box-sizing: border-box;
+        }
+
     </style>
+
     <body>
     <header id="main-header">
           <div class="container">
-              <h1>★ Roadstar</h1>
+              ★ Roadstar
           </div>
       </header>
     </div>
 
+    <section id="cont">
+      <h1>Dallas Best Truck Transportation Company.</h1>
+    </section>
+      
+    <div class="row">
+      <div class="column">
+        <img src="img/construction.jpg" alt="Construction" style="width:100%"/>
+      </div>
+      <div class="column">
+        <img src="img/demolition.jpg" alt="Demolition" style="width:100%"/>
+      </div>
+      <div class="column">
+        <img src="img/truckwithdirt.jpg" alt="Truckwithdirt" style="width:100%"/>
+      </div>
+    </div>
+      
+
     
 
-
-    <section id="showcase">
-      <h1>Dallas Best Truck transportation company.</h1>
-    </section>
-    <div class="container">
+    <div class="cont">
       <section id="main">
         <h1>Updates</h1>
         <p>Updates will be displayed here.</p>
@@ -42,4 +102,6 @@
     </body>
 
     <?php include('templates/footer.php'); ?>
+
+    <?php include('templates/scripts.php'); ?>
 </html>

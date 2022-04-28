@@ -20,7 +20,7 @@
     </style>
     <body>
         <div class="privacy">
-            Privacy Policies
+            Privacy Policy
         </div>
         <section>
         </section>
@@ -348,4 +348,5 @@
     </body>
 
     <?php include('templates/footer.php'); ?>
+    <?php include('templates/scripts.php'); ?>
 </html>
