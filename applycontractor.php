@@ -124,7 +124,7 @@ if(isset($_POST['submit'])){
             color: #FFFFFF;
             font-family: calibri;
             border: 10px grey;
-            font-size: 75px;
+            font-size: 30px;
             text-align: center;
             background: #7399D5;
         }
@@ -132,7 +132,7 @@ if(isset($_POST['submit'])){
 
     <body>
         <div class="contractor">
-            Be our contractor
+            Contractor Information Sheet
         </div>
         <form class="white" action="applycontractor.php" method="POST">
           <br>

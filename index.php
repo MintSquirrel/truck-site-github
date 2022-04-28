@@ -12,19 +12,18 @@
 
     <body>
     <style>
-        .welcome{
-          color: #FFFFFF;
-          font-family: calibri;
-          border: 10px grey;
-          font-size: 75px;
-          text-align: center;
-          background: #7399D5;
-        }
+        
     </style>
     <body>
-    <div class="welcome">
-      Welcome
+    <header id="main-header">
+          <div class="container">
+              <h1>★ Roadstar</h1>
+          </div>
+      </header>
     </div>
+
+    
+
 
     <section id="showcase">
       <h1>Dallas Best Truck transportation company.</h1>

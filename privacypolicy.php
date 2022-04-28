@@ -13,7 +13,7 @@
             color: #FFFFFF;
             font-family: calibri;
             border: 10px grey;
-            font-size: 75px;
+            font-size: 50px;
             text-align: center;
             background: #7399D5;
         }

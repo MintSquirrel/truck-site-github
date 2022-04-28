@@ -5,6 +5,7 @@
 <head>
     <title>Roadrunners</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css" href="css/style.css">
         .brand{
             background: #cbb09c !important;
@@ -23,9 +24,9 @@
       <div class="nav-wrapper">
         <ul class="right hide-on-med-and-down">
                 <li><a href="index.php" >Home</a></li>
+                <li><a href="aboutus.php" >About Us</a></li>
                 <li><a href="applycustomer.php" >Customers</a></li>
                 <li><a href="applycontractor.php" >Contractor</a></li>
-                <li><a href="aboutus.php" >About Us</a></li>
                 <li><a href="privacypolicy.php" >Privacy Policy</a></li>
                 <?php
                     if(isset($_SESSION["username"])){
@@ -45,9 +46,4 @@
         </div>
     </nav>
 
-      <header id="main-header">
-          <div class="container">
-              <h1>★ Roadstar</h1>
-          </div>
-      </header>
-    </div>
+      

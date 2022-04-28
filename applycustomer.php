@@ -118,14 +118,14 @@ if(isset($_POST['submit'])){
   color: #FFFFFF;
   font-family: calibri;
   border: 10px grey;
-  font-size: 75px;
+  font-size: 30px;
   text-align: center;
   background: #7399D5;
 }
     </style>
     <body>
     <div class="customer">
-      Be our customer
+      Customer Information Sheet
     </div>
         <form class="white" action="applycustomer.php" method="POST">
           <br>
