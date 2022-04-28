@@ -76,10 +76,10 @@
       
     <div class="row">
       <div class="column">
-        <img src="img/construction.jpg" alt="Construction" style="width:100%"/>
+        <img src="img/dallas.jpg" alt="Dallas" style="width:100%"/>
       </div>
       <div class="column">
-        <img src="img/demolition.jpg" alt="Demolition" style="width:100%"/>
+        <img src="img/dirttruck.png" alt="Dirttruck" style="width:100%"/>
       </div>
       <div class="column">
         <img src="img/truckwithdirt.jpg" alt="Truckwithdirt" style="width:100%"/>
