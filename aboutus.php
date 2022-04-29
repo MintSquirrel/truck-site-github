@@ -21,13 +21,15 @@
         }
 
     </style>
+
     <body>
     <div class="aboutus">
         About Us
     </div>
-    
+
+    <div class="text-area">
     <div class="row mt-3">
-        <div class="col-12  mt-3">
+        <div class="col-12  mt-3 center">
         <h3>We are Roadstar Trucking Services, LLC.</h3>
         <h4>
             Location: 5326 W. Ledbetter Dr. Dallas, TX 75236<br>
@@ -47,6 +49,7 @@
             our customers satisfaction our number one goal at Road Star. </p>
         </div>
     </div>
+  </div>
 
     <?php include('templates/footer.php'); ?>
     <?php include('templates/scripts.php'); ?>
