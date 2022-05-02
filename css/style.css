@@ -8,25 +8,13 @@ body {
     text-align: center;
   }
 
-    .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    }
-
-  .main-header {
-    background-color: coral;
-    color: #fff;
-    font-family: calibri;
-    border: 10px grey;
-    font-size: 45px;
-  }
+   
 
   .main {
     background-color: #fff;
     float: left;
     width: 70%;
-    padding: 0 30px;
+    padding: 30px;
     box-sizing: border-box;
   }
 

@@ -64,5 +64,5 @@
     </body>
 
     <?php include('templates/footer.php'); ?>
-	<?php include('templates/scripts.php'); ?>
+	
 </html>

@@ -15,7 +15,7 @@
             color: #FFFFFF;
             font-family: calibri;
             border: 10px grey;
-            font-size: 45px;
+            font-size: 30px;
             text-align: center;
             background: #7399D5;
         }
@@ -52,5 +52,5 @@
   </div>
 
     <?php include('templates/footer.php'); ?>
-    <?php include('templates/scripts.php'); ?>
+ 
 </html>

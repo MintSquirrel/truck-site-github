@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
     <?php include('templates/header.php'); ?>
-
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
         <title>Trucking Website</title>
 
     </head>
@@ -13,13 +13,12 @@
     <body>
     <style>
       .container{
-            color: #fff;
-            background-color: coral;
+        color: #FFFFFF;
             font-family: calibri;
-            text-align: center;
             border: 10px grey;
-            font-size: 50px;
-            
+            font-size: 30px;
+            text-align: center;
+            background: #7399D5;
         }
         
         .column {
@@ -38,7 +37,7 @@
         }
 
         .cont {
-          width: 80%;
+          width: 100%;
           margin: auto;
           overflow: hidden;
         }
@@ -47,7 +46,7 @@
           background-color: #fff;
           float: left;
           width: 70%;
-          padding: 0 30px;
+          padding: 30px;
           box-sizing: border-box;
         }
 
@@ -63,12 +62,11 @@
     </style>
 
     <body>
-    <header id="main-header">
+    
           <div class="container">
-              ★ Roadstar
+              <h1>★ Roadstar</h1>
           </div>
-      </header>
-    </div>
+    
 
     <section id="cont">
       <h1>Dallas Best Truck Transportation Company.</h1>
@@ -104,5 +102,5 @@
 
     <?php include('templates/footer.php'); ?>
 
-    <?php include('templates/scripts.php'); ?>
+  
 </html>

@@ -5,7 +5,6 @@
 <head>
     <title>Roadrunners</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css" href="css/style.css">
         .brand{
             background: #cbb09c !important;
@@ -27,7 +26,6 @@
                 <li><a href="aboutus.php" >About Us</a></li>
                 <li><a href="applycustomer.php" >Customers</a></li>
                 <li><a href="applycontractor.php" >Contractor</a></li>
-                <li><a href="privacypolicy.php" >Privacy Policy</a></li>
                 <?php
                     if(isset($_SESSION["username"])){
                         echo "<li><a href='profile.php' >Profile</a></li>";
