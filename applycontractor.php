@@ -137,6 +137,12 @@ if(isset($_POST['submit'])){
         display: block;
       }
     </style>
+    <style>
+      .upload{
+        text-align: left;
+        display: block;
+      }
+    </style>
 
     <body>
         <div class="contractor">
@@ -184,6 +190,30 @@ if(isset($_POST['submit'])){
             <input type="number" id="social" name="social" value="<?php echo htmlspecialchars($social) ?>" ><br><br>
             <div class="red-text"><?php echo $errors['social']; ?></div>
 
+            <label for="w9" class="label">Upload W-9:</label>
+            <input type="file" id="w9" name="w9" class="upload">
+            <br>
+
+            <label for="licenseUpload" class="label">Upload Driver's License:</label>
+            <input type="file" id="licenseUpload" name="licenseUpload" class="upload">
+            <br>
+
+            <label for="ssEin" class="label">Upload Social Security Card or EIN Proof:</label>
+            <input type="file" id="ssEin" name="ssEin" class="upload">
+            <br>
+
+            <label for="insurance" class="label">Upload Insurance:</label>
+            <input type="file" id="insurance" name="insurance" class="upload">
+            <br>
+
+            <label for="registration" class="label">Upload Registration:</label>
+            <input type="file" id="registration" name="registration" class="upload">
+            <br>
+
+            <label for="subcontract" class="label">Upload Sub Contractor Agreement:</label>
+            <input type="file" id="subcontract" name="subcontract" class="upload">
+            <br>
+            
           <center><input type="submit" name="submit" class="btn brand z-depth-0" value="Submit"></center><br>
         </form>
     </body>
