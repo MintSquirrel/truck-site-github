@@ -102,7 +102,7 @@ if(isset($_POST['submit'])){
       if(mysqli_query($conn,$sql)){
         //successful!
         mysqli_close($conn);
-        header('Location: testing_page_contractor.php');
+        header('Location: successful_submission.php');
       } else {
         echo 'query error: ' . mysqli_error($conn);
         mysqli_close($conn);
