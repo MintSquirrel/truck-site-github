@@ -51,6 +51,11 @@
 
         <title>Testing Page</title>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+	<style>
+		.card-content {
+		    text-align: left !important;
+		}
+        </style>
     </head>
     <body>
         <h4 class="center grey-test"> Customer Accounts </h4>
