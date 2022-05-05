@@ -122,21 +122,26 @@ if(isset($_POST['submit'])){
   text-align: center;
   background: #7399D5;
 }
-    </style>
 
-    <style>
       .label{
         font-size: 20px;
         color: #000000;
         text-align: left;
         display: block;
       }
+
+
+      .apply-form {
+        width: 50%;
+        margin: 0 auto;
+        font-family: Tahoma, Geneva, sans-serif;
+      }
     </style>
     <body>
     <div class="customer">
       Customer Information Sheet
     </div>
-        <form class="white" action="applycustomer.php" method="POST">
+        <form class="apply-form" action="applycustomer.php" method="POST">
           <br>
             <label for="cname" class="label">First name:</label>
             <input type="text" id="cname" name="cname"  value="<?php echo htmlspecialchars($cname) ?>" ><br><br>
@@ -183,7 +188,7 @@ if(isset($_POST['submit'])){
     </body>
 
     <?php include('templates/footer.php'); ?>
-    
+
 
 
 </html>

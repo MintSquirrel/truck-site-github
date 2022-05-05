@@ -128,27 +128,32 @@ if(isset($_POST['submit'])){
             text-align: center;
             background: #7399D5;
         }
-    </style>
-    <style>
+
       .label{
         font-size: 20px;
         color: #000000;
         text-align: left;
         display: block;
       }
-    </style>
-    <style>
+
       .upload{
         text-align: left;
         display: block;
       }
+
+      .apply-form {
+        width: 50%;
+        margin: 0 auto;
+        font-family: Tahoma, Geneva, sans-serif;
+      }
+
     </style>
 
     <body>
         <div class="contractor">
             Contractor Information Sheet
         </div>
-        <form class="white" action="applycontractor.php" method="POST">
+        <form class="apply-form" action="applycontractor.php" method="POST">
           <br>
             <label for="fname" class="label">First name:</label>
             <input type="text" id="fname" name="fname"  value="<?php echo htmlspecialchars($fname) ?>" ><br><br>
@@ -213,13 +218,13 @@ if(isset($_POST['submit'])){
             <label for="subcontract" class="label">Upload Sub Contractor Agreement:</label>
             <input type="file" id="subcontract" name="subcontract" class="upload">
             <br>
-            
+
           <center><input type="submit" name="submit" class="btn brand z-depth-0" value="Submit"></center><br>
         </form>
     </body>
 
     <?php include('templates/footer.php'); ?>
-    
+
 
 
 </html>

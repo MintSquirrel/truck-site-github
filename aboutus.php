@@ -20,6 +20,11 @@
             background: #7399D5;
         }
 
+        .aboutus-info{
+          margin:auto;
+          width:45%;
+            text-align: justify;
+        }
     </style>
 
     <body>
@@ -27,15 +32,16 @@
         About Us
     </div>
 
+
     <div class="text-area">
-    <div class="row mt-3">
-        <div class="col-12  mt-3 center">
-        <h3>We are Roadstar Trucking Services, LLC.</h3>
-        <h4>
+    <div class="aboutus-info">
+      <h3>We are Roadstar Trucking Services, LLC.</h3>
+      <hr>
+        <h5>
             Location: 5326 W. Ledbetter Dr. Dallas, TX 75236<br>
             Office Number: 469-291-7755<br>
             Fax Number: 469-291-7898<br>
-        </h4>
+        </h5>
         <p> Roadstar Trucking was started in 2001 by Daniel Tarango. Initially starting with one 20 yard end dump truck. <br>
             We contract work for independent contractors. We have trucks specializing in contruction and demolition. On average, <br>
             about 60-10 trucks go out daily. We run 10 yard tandems, 20 yard end dumps, and 60 yard demolition trailers. We also <br>
@@ -50,7 +56,8 @@
         </div>
     </div>
   </div>
+</div>
 
     <?php include('templates/footer.php'); ?>
- 
+
 </html>
