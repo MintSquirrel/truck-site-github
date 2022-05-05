@@ -16,7 +16,7 @@ $errors = array('cname' => '', 'address' => '',
 if(isset($_POST['submit'])){
 
   if(empty($_POST['cname'])){
-    $errors['cname'] = 'Entering a company name is required.';
+    $errors['cname'] = 'Entering a name is required.';
   } else {
     $cname = $_POST['cname'];
   }
@@ -78,7 +78,6 @@ if(isset($_POST['submit'])){
 
     //get rid of characters that shouldnt' be here
     $cname = mysqli_real_escape_string($conn, $_POST['cname'] );
-    $address = mysqli_real_escape_string($conn, $_POST['address'] );
     $address = mysqli_real_escape_string($conn, $_POST['address'] );
     $city = mysqli_real_escape_string($conn, $_POST['city'] );
     $state = mysqli_real_escape_string($conn, $_POST['state'] );
@@ -143,13 +142,9 @@ if(isset($_POST['submit'])){
     </div>
         <form class="apply-form" action="applycustomer.php" method="POST">
           <br>
-            <label for="cname" class="label">First name:</label>
+            <label for="cname" class="label">Name:</label>
             <input type="text" id="cname" name="cname"  value="<?php echo htmlspecialchars($cname) ?>" ><br><br>
             <div class="red-text"><?php echo $errors['cname']; ?></div>
-
-            <label for="address" class="label">Last name:</label>
-            <input type="text" id="address" name="address" value="<?php echo htmlspecialchars($address) ?>" ><br><br>
-            <div class="red-text"><?php echo $errors['address']; ?></div>
 
             <label for="address" class="label">Address:</label>
             <input type="text" id="address" name="address" value="<?php echo htmlspecialchars($address) ?>" ><br><br>
@@ -176,11 +171,11 @@ if(isset($_POST['submit'])){
             <div class="red-text"><?php echo $errors['email']; ?></div>
 
             <label for="bill_info" class="label">Billing Info:</label>
-            <input type="number" id="bill_info" name="bill_info" value="<?php echo htmlspecialchars($bill_info) ?>" ><br><br>
+            <input type="text" id="bill_info" name="bill_info" value="<?php echo htmlspecialchars($bill_info) ?>" ><br><br>
             <div class="red-text"><?php echo $errors['bill_info']; ?></div>
 
             <label for="credit" class="label">Credit Info:</label>
-            <input type="number" id="credit" name="credit" value="<?php echo htmlspecialchars($credit) ?>" ><br><br>
+            <input type="text" id="credit" name="credit" value="<?php echo htmlspecialchars($credit) ?>" ><br><br>
             <div class="red-text"><?php echo $errors['credit']; ?></div>
 
             <center><input type="submit" name="submit" class="btn brand z-depth-0" value="Submit"></center><br>

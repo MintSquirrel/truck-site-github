@@ -29,6 +29,7 @@
     <body>
     <header id="main-header">
         <div class="container">
+          <center>
             <h1>Profile</h1>
         </div>
     </header>
