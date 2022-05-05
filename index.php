@@ -12,15 +12,19 @@
 
     <body>
     <style>
-      .container{
-        color: #FFFFFF;
+      .header-bar{
+          color: #FFFFFF;
+          width: 100%;
             font-family: calibri;
             border: 10px grey;
-            font-size: 30px;
+            font-size: 75px;
             text-align: center;
             background: #7399D5;
+            min-height:90px;
+            height:auto;
+
         }
-        
+
         .column {
           float: left;
           width: 33.33%;
@@ -62,30 +66,29 @@
     </style>
 
     <body>
-    
-          <div class="container">
-              <h1>★ Roadstar</h1>
+          <div class="header-bar">
+            <br>
+              ★ Roadstar
           </div>
-    
 
     <section id="cont">
       <h1>Dallas Best Truck Transportation Company.</h1>
     </section>
-      
+
     <div class="row">
       <div class="column">
-        <img src="img/dallas.jpg" alt="Dallas" style="width:100%"/>
+        <img src="img/dallas.jpg" alt="Dallas" style="width:100%; height:300px; object-fit:cover;"/>
       </div>
       <div class="column">
-        <img src="img/dirttruck.png" alt="Dirttruck" style="width:100%"/>
+        <img src="img/dirttruck.png" alt="Dirttruck" style="width:100%; height:300px; object-fit:cover;"/>
       </div>
       <div class="column">
-        <img src="img/truckwithdirt.jpg" alt="Truckwithdirt" style="width:100%"/>
+        <img src="img/truckwithdirt.jpg" alt="Truckwithdirt" style="width:100%; height:300px; object-fit:cover;"/>
       </div>
     </div>
-      
 
-    
+
+
 
     <div class="cont">
       <section id="main">
@@ -102,5 +105,5 @@
 
     <?php include('templates/footer.php'); ?>
 
-  
+
 </html>
