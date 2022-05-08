@@ -64,7 +64,7 @@
         }
 
     </style>
-
+//home page titles
     <body>
           <div class="header-bar">
             <br>
@@ -89,13 +89,14 @@
 
 
 
-
+//updates section
     <div class="cont">
       <section id="main">
         <h1>Updates</h1>
         <p>Updates will be displayed here.</p>
       </section>
-
+        
+// offers will be displayed here
       <aside id="sidebar">
         <h1>Welcome</h1>
         <p>welcome text will be display here.</p>
