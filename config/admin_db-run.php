@@ -1,3 +1,5 @@
+
+//admin account permission and validation
 <?php
     if(isset($_POST['submit'])){
         $value1 = $_POST['val1'];
