@@ -17,7 +17,7 @@
 ?>
 
 <html>
-
+//auto emailing templet
    <head>
       <title>Sending HTML email using PHP</title>
    </head>
