@@ -1,7 +1,13 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 // Connection to database
 include('config/db_connect.php');
+//Requirements!
+require 'vendor/phpmailer/phpmailer/src/Exception.php';
+require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require 'vendor/phpmailer/phpmailer/src/SMTP.php';
 
 // Setting up variables to send to SQL
 $cname = $address = $city = $state =
@@ -96,6 +102,51 @@ if(isset($_POST['submit'])){
         //successful!
         mysqli_close($conn);
         header('Location: successful_submission.php');
+
+
+        //Send create and send email to admin
+        $mail = new PHPMailer();
+        $mail->IsSMTP();
+        $mail->Mailer = "smtp";
+        $mail->SMTPDebug  = 1;
+        $mail->SMTPAuth   = TRUE;
+        $mail->SMTPSecure = "tls";
+        $mail->Port       = 587;
+        $mail->Host       = "smtp.gmail.com";
+        //The gmail username and password
+        $mail->Username   = "roadrunnersemaildemount@gmail.com";
+        $mail->Password   = "Roadrunners!1";
+        $mail->IsHTML(true);
+        //recipient address
+        //MORE CAN BE ADDED
+        //$mail->AddAddress("recipientemail", "recipient-name");
+        $mail->AddAddress("roadrunnersemaildemount@gmail.com", "recipient-name");
+        //sender name
+        $mail->SetFrom("roadrunnersemaildemount@gmail.com", "Roadrunners");
+        // Reply link (probably not needed)
+        $mail->AddReplyTo("roadrunnersemaildemount@gmail.com", "do-not-reply");
+        //Subject
+        $mail->Subject = $fname . " ". $lname ." 's Customer Application";
+        //Email content
+        $content = "
+        <b>First Name + Last Name: </b>$cname <br>
+        <b>Address: </b>$address <br>
+        <b>City: </b>$city <br>
+        <b>State: </b>$state <br>
+        <b>Zip Code: </b>$zip <br>
+        <b>Phone Number: </b>$phone <br>
+        <b>Email: </b>$email <br>
+        <b>Billing: </b>$bill_info <br>
+        <b>Credit: </b>$credit
+        ";
+
+        $mail->MsgHTML($content);
+        if(!$mail->Send()) {
+          //error happened when sending mail
+        } else {
+          //mail sent successfully
+        }
+
       } else {
         echo 'query error: ' . mysqli_error($conn);
         mysqli_close($conn);

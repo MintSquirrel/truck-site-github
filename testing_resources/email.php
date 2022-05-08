@@ -1,3 +1,21 @@
+<?php
+
+// connect to database
+  include('config/db_connect.php');
+
+  //write query for all trucks
+  $sql = 'SELECT * FROM customers ORDER BY date_created';
+
+  // get results of query
+  $result = mysqli_query($conn, $sql);
+
+  //fetch rows (records) as array
+  $customers = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_free_result($result);
+  mysqli_close($conn);
+
+?>
+
 <html>
 
    <head>
