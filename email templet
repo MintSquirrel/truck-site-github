@@ -1,0 +1,9 @@
+---------- MESSAGE FOLLOWS ----------
+b'X-Peer: ::1'
+b''
+b'From: my@address.com'
+b'To: your@address.com'
+b'Subject: a local test mail'
+b''
+b'Hello there, here is a test email'
+------------ END MESSAGE ------------
