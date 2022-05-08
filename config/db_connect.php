@@ -1,3 +1,5 @@
+// database connection
+
 <?php
 $dbServername = "localhost";
 $dbUsername = "bluejjay";
