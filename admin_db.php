@@ -48,7 +48,18 @@
 <!DOCTYPE html>
 <html>
     <?php include('templates/header.php'); ?>
-
+    <?php
+	if($_SESSION["account"] !== "Admin"){
+            if(isset($_SERVER['HTTP_REFERER'])){
+                header('Location: ' . $_SERVER['HTTP_REFERER']);
+                exit();
+            }
+            else{
+                header("Location: index.php");
+                exit();
+            }
+        }
+    ?>
         <title>Testing Page</title>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
 	<style>
