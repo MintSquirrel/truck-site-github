@@ -77,4 +77,8 @@
         header("Location: ../admin_db.php?error=none");
         exit();
     }
+    else{
+        header("Location: ../admin_db.php");
+        exit();
+    } 
 ?>
