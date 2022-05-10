@@ -286,7 +286,7 @@ class Dropdowns extends Formr\Formr
         ];
     }
 
-    # u.s. states and canadian provinces
+    # u.s. states and canadian provinces with their short forms
     public static function states_provinces()
     {
         return [
@@ -363,7 +363,7 @@ class Dropdowns extends Formr\Formr
     }
 
 
-    # countries
+    # countries with their short forms
     public static function countries()
     {
         return [

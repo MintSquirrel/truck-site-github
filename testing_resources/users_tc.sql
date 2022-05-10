@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2022 at 07:25 PM
+-- Generation Time: May 09, 2022 at 08:23 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -20,6 +20,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `users_tc`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(10) NOT NULL,
+  `adm_uid` varchar(30) NOT NULL,
+  `adm_pwd` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `adm_uid`, `adm_pwd`) VALUES
+(1, 'admin1', '$2a$10$kFBFUjkFDcYr8ZV5.Ri2k.vQzrMUtQXip8.fayT7bNl0Jl/dNrfb6'),
+(3, 'admin', '$2a$04$jX7faEfjbfeTAGt5ROrqwePHE.5bwdEF2fFt6fj.cyDcNowK4CvM2');
 
 -- --------------------------------------------------------
 
@@ -47,7 +67,8 @@ CREATE TABLE `contractors` (
 --
 
 INSERT INTO `contractors` (`id`, `fname`, `lname`, `address`, `city`, `state`, `zip`, `phone`, `email`, `license`, `social`, `date_created`) VALUES
-(1, 'a', 'v', 'rqrq', 'rqr', 'tx', '55353', '5', 'afdg@gmail.com', 41342, '141421', '2022-03-29 15:00:50');
+(0, 'Bruce', 'Kane', '1300 Dallas Dr.', 'Denton', 'TX', '76205', '4695253763', 'Bruce@gmail.com', 2147483647, '999887777', '2022-05-03 06:19:54'),
+(1, 'Jerry', 'West', '1100 Road Drive', 'Dallas', 'Texas', '75063', '4447778888', 'IssaEmail@gmail.com', 41342, '141421', '2022-03-29 20:00:50');
 
 -- --------------------------------------------------------
 
@@ -74,42 +95,29 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`id`, `cname`, `address`, `city`, `state`, `zip`, `phone`, `email`, `bill_info`, `credit`, `date_created`) VALUES
-(1, 'a', 'c', 'd', 'e', '5', '1', '352@gmail.com', '5', '1', '2022-03-29 17:18:52'),
-(2, 'benis', 'crqrq', 'd12', 'e12421', '55555555', '151-52151-525', 'aaaa@gmail.org', '55555', '1', '2022-03-29 17:20:02');
+(1, 'John Doe', '7221 Drive Dr.', 'Cleveland', 'Ohio', '77777', '4445559999', 'JohnDoe@gmail.com', '5', '1', '2022-03-29 22:18:52'),
+(2, 'denis', '5555 Main St.', 'd12', 'e12421', '55555555', '151-52151-525', 'aaaa@gmail.org', '55555', '1', '2022-03-29 22:20:02');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `trucks`
+-- Table structure for table `employees`
 --
 
-CREATE TABLE `trucks` (
-  `id` int(11) NOT NULL,
-  `model` varchar(255) NOT NULL,
-  `year` int(255) NOT NULL,
-  `miles` int(5) NOT NULL,
-  `date_created` timestamp NOT NULL DEFAULT current_timestamp()
+CREATE TABLE `employees` (
+  `id` int(10) NOT NULL,
+  `emp_uid` varchar(30) NOT NULL,
+  `emp_pwd` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `trucks`
+-- Dumping data for table `employees`
 --
 
-INSERT INTO `trucks` (`id`, `model`, `year`, `miles`, `date_created`) VALUES
-(1, 'Cool Truck', 1999, 2, '2022-02-14 23:04:39'),
-(2, 'Monster Truck', 2069, 420, '2022-02-14 23:11:40'),
-(3, 'another truck', 2050, 96500, '2022-02-14 23:24:43'),
-(4, 'Mama Luigi', 123466, 42131, '2022-02-15 00:07:16'),
-(5, 'alphabet', 123414, 9, '2022-02-15 00:07:38'),
-(6, 'obama', 4141, 54645646, '2022-02-15 00:08:16'),
-(7, 'Pootis', 192345, 1000000, '2022-02-15 03:23:38'),
-(8, 'Pootis', 192345, 1000000, '2022-02-15 03:24:11'),
-(9, 'Pootisb', 192345, 1000000, '2022-02-15 03:24:16'),
-(10, '', 0, 0, '2022-02-15 03:24:20'),
-(11, 'Apple', 1241, 242, '2022-02-15 03:32:09'),
-(12, 'a', 4, 4, '2022-02-15 17:58:47'),
-(13, 'Asdfghj97859', 3, 3, '2022-02-15 18:08:43'),
-(14, 'Big truck', 1996, 525252, '2022-02-15 18:13:49');
+INSERT INTO `employees` (`id`, `emp_uid`, `emp_pwd`) VALUES
+(5, 'test2', '$2y$10$AjEZI7HXA31TcUG7w18IHOxpMw358RF6XrucOQK1ojI6SEcfkuT8C'),
+(13, 'bub', '$2y$10$7YC1jXTYsPEyhu138bvmP.5VzDfuVgnrwS6f6AChrn20OBPN1bz6K'),
+(16, 'sub1', '$2y$10$i7o/tITzcdEwU6MMqt6hHu6Ze4.AkLL6lPRfsTKiZdBXW6nJvvVsS');
 
 -- --------------------------------------------------------
 
@@ -118,31 +126,32 @@ INSERT INTO `trucks` (`id`, `model`, `year`, `miles`, `date_created`) VALUES
 --
 
 CREATE TABLE `users` (
-  `id` int(10) NOT NULL,
+  `id` int(11) NOT NULL,
   `user_uid` varchar(30) NOT NULL,
   `user_pwd` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `user_uid`, `user_pwd`) VALUES
+(28, 'test1', '$2y$10$dTD1PP3FDHVvuPxEoV.P0eZbe3L3Ndr9HlhWvoKLyNa/yRnfgiLyy');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `contractors`
+-- Indexes for table `admin`
 --
-ALTER TABLE `contractors`
+ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `customers`
+-- Indexes for table `employees`
 --
-ALTER TABLE `customers`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `trucks`
---
-ALTER TABLE `trucks`
+ALTER TABLE `employees`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -156,48 +165,24 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `contractors`
+-- AUTO_INCREMENT for table `admin`
 --
-ALTER TABLE `contractors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `admin`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `customers`
+-- AUTO_INCREMENT for table `employees`
 --
-ALTER TABLE `customers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `trucks`
---
-ALTER TABLE `trucks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+ALTER TABLE `employees`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-CREATE TABLE `users` (
-  `id` int(10) NOT NULL,
-  `user_uid` varchar(30) NOT NULL,
-  `user_pwd` varchar(256) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-CREATE TABLE `employees` (
-  `id` int(10) NOT NULL,
-  `emp_uid` varchar(30) NOT NULL,
-  `emp_pwd` varchar(256) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-CREATE TABLE `admin` (
-  `id` int(10) NOT NULL,
-  `adm_uid` varchar(30) NOT NULL,
-  `adm_pwd` varchar(256) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

@@ -91,7 +91,7 @@ class Forms extends Formr\Formr
         }
     }
 
-    # alias for signup
+    # alias for signup page
     public static function registration($validate = '')
     {
         return static::signup($validate);
