@@ -126,7 +126,7 @@ if(isset($_POST['submit'])){
         // Reply link (probably not needed)
         $mail->AddReplyTo("roadrunnersemaildemount@gmail.com", "do-not-reply");
         //Subject
-        $mail->Subject = $fname . " ". $lname ." 's Customer Application";
+        $mail->Subject = $cname . " 's Customer Application";
         //Email content
         $content = "
         <b>First Name + Last Name: </b>$cname <br>
