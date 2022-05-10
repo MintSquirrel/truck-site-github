@@ -3,6 +3,7 @@
     // Code inspired by Dani Krossings' php tutorial on php, databases, and starting a login system
     // https://www.youtube.com/watch?v=gCo6JqGMi30&ab_channel=DaniKrossing
 
+    // checks if passwords match
     function pwdMatch($pwd, $pwd_confirm){
         $result;
         if($pwd !== $pwd_confirm){
@@ -15,6 +16,7 @@
         return $result;
     }
 
+    // checks if the password matches the one in the database
     function checkPwd($conn, $pwd, $name, $acc){
         if($acc === "Customer"){
             $sql = "SELECT * FROM users WHERE user_uid = ?;";
@@ -63,6 +65,7 @@
         }
     }
 
+    // function to change the password
     function changePwd($conn, $pwd, $name, $acc){
         if($acc === "Customer"){
             $sql = "UPDATE users SET user_pwd = ? WHERE user_uid = ?;";
@@ -94,7 +97,8 @@
         header("Location: ../change_pwd.php?error=none");
         exit();
     }
-
+    
+    // function to check if the customer name is correct
     function checkName($conn, $name){
         $sql = "SELECT * FROM users WHERE user_uid = ?;";
 
@@ -119,7 +123,8 @@
 
         mysqli_stmt_close($stmt);
     }
-
+    
+    // function to check if the contractor name is correct 
     function checkNameEmp($conn, $name){
         $sql = "SELECT * FROM employees WHERE emp_uid = ?;";
 
@@ -144,7 +149,8 @@
 
         mysqli_stmt_close($stmt);
     }
-
+    
+    // function to check if the admin name is correct
     function checkNameAdmin($conn, $name){
         $sql = "SELECT * FROM admin WHERE adm_uid = ?;";
 
@@ -170,7 +176,7 @@
         mysqli_stmt_close($stmt);
     }
 
-
+    // function to register a customer
     function registerUser($conn, $name, $pwd){
         $sql = "INSERT INTO users (user_uid, user_pwd) VALUES (?, ?)";
         
@@ -190,7 +196,8 @@
         header("Location: ../register.php?error=none");
         exit();
     }
-
+    
+    // function to register a contractor
     function registerUserSub($conn, $name, $pwd){
         $sql = "INSERT INTO employees (emp_uid, emp_pwd) VALUES (?, ?)";
         
@@ -210,7 +217,8 @@
         header("Location: ../admin_create.php?error=none");
         exit();
     }
-
+    
+    // logins in the customer, contractor, or admin based on the credentials
     function loginUser($conn, $name, $pwd){
         $user = checkName($conn, $name);
 
